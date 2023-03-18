@@ -1,0 +1,6 @@
+SELECT jugadores.nombre AS nombre_jugador,jugadores.numero AS numero_jugador,
+municipios.nombre AS municipio,equipos.nombre AS nombre_equipo,
+equipos.dt AS entrenador,posiciones.nombre AS posiciones FROM municipios 
+INNER JOIN equipos ON municipios.id = equipos.municipio_id 
+INNER JOIN jugadores ON equipos.id = jugadores.equipo_id 
+INNER JOIN posiciones ON jugadores.posicion_id = posiciones.id;
